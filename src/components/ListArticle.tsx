@@ -11,11 +11,13 @@ const ListArticle = ({ result }: SingleArticle) => {
   const publishedAtDate = new Date(result.published_at).toLocaleDateString()
   return (
     <Card onClick={() => navigate(`/article/${result.id}`)}>
-      <CardImg variant="top" src={result.image_url} className="img-fluid rounded-4" />
+      <CardImg variant="top" src={result.image_url} className="img-fluid" />
       <CardBody>
         <CardTitle>{result.title}</CardTitle>
       </CardBody>
-      <CardFooter>{publishedAtDate}</CardFooter>
+      <CardFooter>
+        <small>Published at: {publishedAtDate}</small>
+      </CardFooter>
     </Card>
   )
 }
