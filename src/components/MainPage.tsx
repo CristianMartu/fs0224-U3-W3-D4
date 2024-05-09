@@ -26,7 +26,7 @@ const MainPage = () => {
 
   return (
     <Container>
-      <Row className="row-gap-3 ">
+      <Row className="row-gap-3 align-items-baseline w-100">
         {articles &&
           articles.results.map((article) => {
             return (

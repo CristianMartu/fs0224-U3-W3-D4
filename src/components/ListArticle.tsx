@@ -10,7 +10,7 @@ const ListArticle = ({ result }: SingleArticle) => {
   const navigate = useNavigate()
   const publishedAtDate = new Date(result.published_at).toLocaleDateString()
   return (
-    <Card onClick={() => navigate(`/article${result.id}`)}>
+    <Card onClick={() => navigate(`/article/${result.id}`)}>
       <CardImg variant="top" src={result.image_url} className="img-fluid rounded-4" />
       <CardBody>
         <CardTitle>{result.title}</CardTitle>
